@@ -163,6 +163,8 @@ subroutine drv_restart (rw, drv, tile, clm, rank, istep_pf)
      ! Initialize VIS/NIR snow ages from legacy - will be overwritten if new format @RMM 2025
      snowage_vis = snowage
      snowage_nir = snowage
+     read(40) snowage_vis          !CLM VIS band snow age[-]
+     read(40) snowage_nir          !CLM NIR band snow age[-]
      read(40) snowdp               !CLM Snow Depth [m]
      read(40) h2ocan               !CLM Depth of Water on Foliage [mm]
      read(40) frac_sno             !CLM Fractional Snow Cover [-]
